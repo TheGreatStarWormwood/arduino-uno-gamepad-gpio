@@ -63,5 +63,5 @@ void loop() {
   Serial.println(joystickButtonState == LOW ? "0" : "1");
 
   // Add a short delay to avoid flooding the serial output
-  delay(100);
+  delay(200);
 }

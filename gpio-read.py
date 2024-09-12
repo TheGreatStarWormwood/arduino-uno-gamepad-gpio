@@ -35,8 +35,8 @@ def map_to_ps2_controller(data):
     joystick_x_value = int(joystick_x)
     joystick_y_value = int(joystick_y)
 
-    joystick_x_value = (joystick_x_value - 512) // 4
-    joystick_y_value = (joystick_y_value - 512) // 4
+    joystick_x_value = ((joystick_x_value - 512) // 4)*245
+    joystick_y_value = ((joystick_y_value - 512) // 4)*245
 
     device.write(e.EV_ABS, e.ABS_X, joystick_x_value)
     device.write(e.EV_ABS, e.ABS_Y, joystick_y_value)
